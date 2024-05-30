@@ -19,8 +19,6 @@ int main(int argc, char **argv)
 		FILE *arq_csv = fopen(argv[2],"w");
 
 
-		fputs("Number,ibat,vbat,hour,minute,second\r\n",arq_csv);
-
 		for(int i = 0; i < 60 ; i++)
 		{
 			fread(&sample[i],sizeof(samples_t),1,arq_bin);
